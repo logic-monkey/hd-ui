@@ -1,0 +1,104 @@
+[gd_scene load_steps=5 format=3 uid="uid://de3ogl35mhi83"]
+
+[ext_resource type="Theme" uid="uid://eq7rhl6d0pm0" path="res://addons/hd-ui/atkinson.tres" id="1_n2kj8"]
+[ext_resource type="Script" path="res://addons/hd-ui/hd-title.gd" id="1_nob1s"]
+[ext_resource type="FontFile" uid="uid://be8xotsmfg0m5" path="res://addons/hd-ui/AtkinsonHyperlegible-Bold.ttf" id="2_7xhkl"]
+[ext_resource type="Script" path="res://addons/doodads/control_bleeper.gd" id="4_uwt4n"]
+
+[node name="hd-title" type="CanvasLayer"]
+layer = 64
+script = ExtResource("1_nob1s")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_n2kj8")
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="logo_space" type="ReferenceRect" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+mouse_filter = 2
+border_width = 4.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("2_7xhkl")
+theme_override_font_sizes/font_size = 60
+text = "Game Title"
+horizontal_alignment = 1
+
+[node name="start" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 48
+text = "Start"
+
+[node name="ControlBleeper" type="AudioStreamPlayer2D" parent="MarginContainer/VBoxContainer/start"]
+script = ExtResource("4_uwt4n")
+
+[node name="options" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 48
+text = "Options"
+
+[node name="ControlBleeper2" type="AudioStreamPlayer2D" parent="MarginContainer/VBoxContainer/options"]
+position = Vector2(17, -46)
+script = ExtResource("4_uwt4n")
+
+[node name="credits" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 48
+text = "Credits"
+
+[node name="ControlBleeper3" type="AudioStreamPlayer2D" parent="MarginContainer/VBoxContainer/credits"]
+position = Vector2(14, -92)
+script = ExtResource("4_uwt4n")
+
+[node name="exit" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+text = "Exit"
+
+[node name="ControlBleeper4" type="AudioStreamPlayer2D" parent="MarginContainer/VBoxContainer/exit"]
+position = Vector2(-6, -138)
+script = ExtResource("4_uwt4n")
+
+[node name="menu_to_notes_space" type="ReferenceRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+border_width = 4.0
+
+[node name="notes" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1900, 2)
+layout_mode = 2
+text = "Sample notes here."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/exit" to="." method="_on_exit_pressed"]

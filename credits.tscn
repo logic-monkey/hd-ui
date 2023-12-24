@@ -1,0 +1,110 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnd0nt53fohev"]
+
+[ext_resource type="Theme" uid="uid://eq7rhl6d0pm0" path="res://addons/hd-ui/atkinson.tres" id="1_52i85"]
+[ext_resource type="FontFile" uid="uid://be8xotsmfg0m5" path="res://addons/hd-ui/AtkinsonHyperlegible-Bold.ttf" id="2_wf0nx"]
+[ext_resource type="Script" path="res://addons/hd-ui/credits.gd" id="2_wslxk"]
+[ext_resource type="Script" path="res://addons/doodads/control_bleeper.gd" id="4_jbcl7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f3wmb"]
+
+[node name="credits" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_52i85")
+color = Color(0, 0, 0, 1)
+script = ExtResource("2_wslxk")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wf0nx")
+theme_override_font_sizes/font_size = 32
+text = "Credits"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "By E. Darwin Hartshorn"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_f3wmb")
+
+[node name="Licenses" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wf0nx")
+theme_override_font_sizes/font_size = 32
+text = "Music"
+horizontal_alignment = 1
+
+[node name="music_creds" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_f3wmb")
+
+[node name="Licenses2" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wf0nx")
+theme_override_font_sizes/font_size = 32
+text = "Licenses"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Uses the free Godot Engine"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "License, and licenses for all third-party components may be found at https://godotengine.org/license/"
+horizontal_alignment = 1
+
+[node name="return" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Return"
+
+[node name="ControlBleeper" type="AudioStreamPlayer2D" parent="MarginContainer/VBoxContainer/return"]
+position = Vector2(-918, -1022)
+script = ExtResource("4_jbcl7")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/return" to="." method="_on_return_pressed"]

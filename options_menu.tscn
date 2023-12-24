@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=3 uid="uid://lejd0mhhcyyg"]
+
+[ext_resource type="Theme" uid="uid://eq7rhl6d0pm0" path="res://addons/hd-ui/atkinson.tres" id="1_au30n"]
+[ext_resource type="Script" path="res://addons/hd-ui/options_menu.gd" id="1_c3thh"]
+[ext_resource type="Script" path="res://addons/doodads/control_bleeper.gd" id="3_ddg6f"]
+
+[node name="options_menu" type="CanvasLayer"]
+process_mode = 3
+layer = 96
+script = ExtResource("1_c3thh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_au30n")
+color = Color(0, 0, 0, 0.501961)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="TabContainer" type="TabContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="return" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Return"
+
+[node name="ControlBleeper" type="AudioStreamPlayer2D" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/return"]
+script = ExtResource("3_ddg6f")
+
+[node name="title" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Title Screen"
+
+[node name="ControlBleeper2" type="AudioStreamPlayer2D" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/title"]
+position = Vector2(-89, 0)
+script = ExtResource("3_ddg6f")
+
+[node name="exit" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Exit"
+
+[node name="ControlBleeper3" type="AudioStreamPlayer2D" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/exit"]
+position = Vector2(-243, 0)
+script = ExtResource("3_ddg6f")
+
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/title" to="." method="_on_title_pressed"]
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/exit" to="." method="_on_exit_pressed"]
