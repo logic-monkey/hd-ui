@@ -1,12 +1,12 @@
 extends CanvasLayer
 
-
 func _ready():
 	if OS.has_feature("web"):
 		%exit.visible = false
 	load_data()
 	%start.grab_focus()
 		
+var bg = null
 func load_data():
 	var bb = load("res://blackboard.tres")
 	if not bb: return
@@ -14,6 +14,11 @@ func load_data():
 		%notes.text = bb.notes
 	if "title_theme" in bb and has_node("/root/_MUSIC"):
 		_MUSIC.SwitchToSong(bb.title_theme)
+	if "title" in bb:
+		%title.text = bb.title
+	if "title_background" in bb and bb.title_background:
+		bg = load(bb.title_background).instantiate()
+		%background.add_child(bg)
 		
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
