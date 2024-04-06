@@ -14,11 +14,15 @@ func load_data():
 		%notes.text = bb.notes
 	if "title_theme" in bb and has_node("/root/_MUSIC"):
 		_MUSIC.SwitchToSong(bb.title_theme)
+
 	if "title" in bb:
 		%title.text = bb.title
 	if "title_background" in bb and bb.title_background:
 		bg = load(bb.title_background).instantiate()
 		%background.add_child(bg)
+	if "_data" in bb:
+		if "title" in bb._data:
+			%title.text = bb._data.title
 		
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
@@ -41,3 +45,11 @@ func _on_options_pressed():
 
 func _on_credits_pressed():
 	_FADE.FadeTo("res://addons/hd-ui/credits.tscn")
+
+
+func _on_start_pressed():
+	var bb = load("res://blackboard.tres")
+	if not bb or not "_data" in bb or not "start_target" in bb._data: 
+		print_rich("[pulse][b][color=#6699ff]Pressed Start; No 'start_target' in blackboard.[/color][/b][/pulse]")
+		return
+	_FADE.FadeTo(bb._data.start_target)

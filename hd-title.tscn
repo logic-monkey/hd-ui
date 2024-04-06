@@ -102,7 +102,7 @@ autowrap_mode = 2
 
 [node name="background" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
-
+[connection signal="pressed" from="MarginContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/exit" to="." method="_on_exit_pressed"]
