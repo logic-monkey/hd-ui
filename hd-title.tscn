@@ -31,7 +31,8 @@ layout_mode = 2
 mouse_filter = 2
 border_width = 4.0
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="title" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
@@ -99,6 +100,7 @@ text = "Sample notes here."
 horizontal_alignment = 1
 autowrap_mode = 2
 
+[connection signal="pressed" from="MarginContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/exit" to="." method="_on_exit_pressed"]

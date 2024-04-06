@@ -5,13 +5,15 @@ extends ColorRect
 func _ready():
 	%return.grab_focus()
 	var bb = load("res://blackboard.tres")
-	if not bb or not "audioCredits" in bb: return
-	for credit in bb.audioCredits:
-		var l = Label.new()
-		l.text = credit
-		l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		%music_creds.add_child(l)
-
+	if not bb: return
+	if "audioCredits" in bb: 
+		for credit in bb.audioCredits:
+			var l = Label.new()
+			l.text = credit
+			l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+			%music_creds.add_child(l)
+	if "_data" in bb and "title" in bb._data:
+		%game_name.text = bb._data.title
 
 
 
