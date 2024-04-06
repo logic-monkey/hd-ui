@@ -1164,7 +1164,6 @@ Button/styles/focus = SubResource("StyleBoxFlat_84hvr")
 Button/styles/hover = SubResource("StyleBoxFlat_yv1nl")
 Button/styles/normal = SubResource("StyleBoxFlat_315yy")
 Button/styles/pressed = SubResource("StyleBoxFlat_pq1s8")
-<<<<<<< HEAD
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
 RichTextLabel/colors/font_selected_color = Color(0, 0, 0, 1)
@@ -1194,7 +1193,6 @@ RichTextLabel/fonts/mono_font = ExtResource("1_sortn")
 RichTextLabel/fonts/normal_font = ExtResource("1_sortn")
 RichTextLabel/styles/focus = null
 RichTextLabel/styles/normal = null
-=======
 TabContainer/colors/drop_mark_color = Color(1, 1, 1, 1)
 TabContainer/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 TabContainer/colors/font_hovered_color = Color(0.95, 0.95, 0.95, 1)
@@ -1221,4 +1219,3 @@ TabContainer/styles/tab_hovered = SubResource("StyleBoxFlat_ttf5s")
 TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_4b1nl")
 TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_p4l6h")
 TabContainer/styles/tabbar_background = SubResource("StyleBoxEmpty_p5oyn")
->>>>>>> 96d50fc (Added start game, game title to credits and title screen, and various small tweaks.)
