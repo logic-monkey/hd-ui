@@ -12,9 +12,10 @@ func _ready():
 			l.text = credit
 			l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 			%music_creds.add_child(l)
+		if bb.audioCredits.size() <= 0: %music_heading.visible = false
+	else: %music_heading.visible == false
 	if "_data" in bb and "title" in bb._data:
 		%game_name.text = bb._data.title
-
 
 
 func _on_return_pressed():

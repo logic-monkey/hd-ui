@@ -68,7 +68,8 @@ layout_mode = 2
 theme_override_constants/separation = 20
 theme_override_styles/separator = SubResource("StyleBoxEmpty_f3wmb")
 
-[node name="Licenses" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+[node name="music_heading" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_wf0nx")
 theme_override_font_sizes/font_size = 32

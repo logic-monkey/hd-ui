@@ -6,7 +6,7 @@
 
 [node name="options_menu" type="CanvasLayer"]
 process_mode = 3
-layer = 96
+layer = 125
 script = ExtResource("1_c3thh")
 
 [node name="ColorRect" type="ColorRect" parent="."]

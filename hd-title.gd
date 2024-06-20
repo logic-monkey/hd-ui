@@ -23,6 +23,9 @@ func load_data():
 	if "_data" in bb:
 		if "title" in bb._data:
 			%title.text = bb._data.title
+		if "title_background" in bb._data:
+			bg = load(bb._data.title_background).instantiate()
+			%background.add_child(bg)
 		
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
