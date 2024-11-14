@@ -74,4 +74,3 @@ func _on_exit_pressed():
 	if has_node("/root/_IMP"):
 		if _IMP.mode != _IMP.MENU: return
 	get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
-

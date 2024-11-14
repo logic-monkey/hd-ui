@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dl6pwtan31cs6"]
+[gd_scene load_steps=3 format=3 uid="uid://dl6pwtan31cs6"]
 
 [ext_resource type="PackedScene" uid="uid://l7j8t24lwhi4" path="res://addons/hd-ui/heart_bar.tscn" id="1_ox7ek"]
 [ext_resource type="Script" path="res://addons/hd-ui/hd_ui.gd" id="1_uypwa"]
-[ext_resource type="FontFile" uid="uid://be8xotsmfg0m5" path="res://addons/hd-ui/AtkinsonHyperlegible-Bold.ttf" id="3_ow1x3"]
-[ext_resource type="FontFile" uid="uid://bkov7prxkkane" path="res://addons/hd-ui/MonoBold-z8jG0.ttf" id="4_xjg6j"]
 
 [node name="hd_ui" type="CanvasLayer"]
 process_mode = 3
@@ -35,80 +33,3 @@ theme_override_constants/margin_bottom = 10
 [node name="heart_bar" parent="Control/MarginContainer" instance=ExtResource("1_ox7ek")]
 layout_mode = 2
 mouse_filter = 2
-
-[node name="MarginContainer2" type="MarginContainer" parent="Control"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer2"]
-layout_mode = 2
-mouse_filter = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer2/VBoxContainer"]
-layout_mode = 2
-mouse_filter = 2
-alignment = 2
-
-[node name="Label" type="Label" parent="Control/MarginContainer2/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0.231373, 0.235294, 0.227451, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 3
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("3_ow1x3")
-theme_override_font_sizes/font_size = 40
-text = "High Score: "
-
-[node name="hiscore" type="Label" parent="Control/MarginContainer2/VBoxContainer/HBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0.231373, 0.235294, 0.227451, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 3
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("4_xjg6j")
-theme_override_font_sizes/font_size = 40
-text = "000"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="Control/MarginContainer2/VBoxContainer"]
-layout_mode = 2
-mouse_filter = 2
-alignment = 2
-
-[node name="Label" type="Label" parent="Control/MarginContainer2/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0.231373, 0.235294, 0.227451, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 3
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("3_ow1x3")
-theme_override_font_sizes/font_size = 50
-text = "Score: "
-
-[node name="score" type="Label" parent="Control/MarginContainer2/VBoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0.231373, 0.235294, 0.227451, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 3
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("4_xjg6j")
-theme_override_font_sizes/font_size = 50
-text = "000"
