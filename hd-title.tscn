@@ -29,13 +29,14 @@ layout_mode = 2
 theme_override_constants/separation = 8
 
 [node name="logo_space" type="ReferenceRect" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 500)
+custom_minimum_size = Vector2(0, 650)
 layout_mode = 2
 mouse_filter = 2
 border_width = 4.0
 
 [node name="title" type="Label" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
@@ -100,9 +101,9 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(1900, 2)
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("5_khcf1")
-theme_override_fonts/bold_font = ExtResource("2_7xhkl")
 theme_override_fonts/italics_font = ExtResource("6_rcl7e")
 theme_override_fonts/bold_italics_font = ExtResource("7_ccw0b")
+theme_override_fonts/bold_font = ExtResource("2_7xhkl")
 bbcode_enabled = true
 text = "Sample notes here."
 fit_content = true
