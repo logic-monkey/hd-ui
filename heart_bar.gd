@@ -1,4 +1,5 @@
 @tool
+#TODO: Extract this from UI, make it platformer, or a third thing. 
 extends HBoxContainer
 class_name HDUI_HEART_BAR
 
@@ -21,7 +22,7 @@ var _chp: int = 12
 	get:
 		return _chp
 		
-var hero_hp : HeartPoints
+var hero_hp #: HeartPoints
 
 func set_max_hp():
 	var m = max_hp
@@ -59,7 +60,7 @@ func _process(_delta):
 		max_hp = 0
 		cur_hp = 0
 		return
-	var hp = hero_hp as HeartPoints
+	var hp = hero_hp #as HeartPoints
 	if hp.hp != max_hp: 
 		#print("updating max!")
 		max_hp = hp.hp

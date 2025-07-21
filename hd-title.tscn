@@ -47,14 +47,30 @@ theme_override_font_sizes/font_size = 60
 text = "Game Title"
 horizontal_alignment = 1
 
-[node name="start" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="start" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 48
 text = "Start"
 
-[node name="ControlBleeper" type="AudioStreamPlayer2D" parent="MarginContainer/VBoxContainer/start"]
+[node name="ControlBleeper" type="AudioStreamPlayer2D" parent="MarginContainer/VBoxContainer/HBoxContainer/start"]
+script = ExtResource("4_uwt4n")
+
+[node name="story" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 48
+text = "Story"
+
+[node name="ControlBleeper" type="AudioStreamPlayer2D" parent="MarginContainer/VBoxContainer/HBoxContainer/story"]
 script = ExtResource("4_uwt4n")
 
 [node name="options" type="Button" parent="MarginContainer/VBoxContainer"]
@@ -112,7 +128,8 @@ autowrap_mode = 2
 [node name="background" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/story" to="." method="_on_story_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/exit" to="." method="_on_exit_pressed"]

@@ -5,6 +5,8 @@ func _ready():
 		%exit.visible = false
 	load_data()
 	%start.grab_focus()
+	#await get_tree().create_timer(1).timeout
+	#_IMP.mode = 
 		
 var bg = null
 func load_data():
@@ -17,6 +19,10 @@ func load_data():
 
 	if "title" in bb:
 		%title.text = bb.title
+	if "story" in bb and bb.story:
+		%story.visible = true
+		if "story_only" in bb and bb.story_only:
+			%start.visible = false
 	if "title_background" in bb and bb.title_background:
 		bg = load(bb.title_background).instantiate()
 		%background.add_child(bg)
@@ -56,3 +62,10 @@ func _on_start_pressed():
 		print_rich("[pulse][b][color=#6699ff]Pressed Start; No 'start_target' in blackboard.[/color][/b][/pulse]")
 		return
 	_FADE.FadeTo(bb._data.start_target)
+
+
+func _on_story_pressed() -> void:
+	if bg and bg.has_method("start"):
+		bg.start()
+		await bg.started
+	_PANELS.Start()
