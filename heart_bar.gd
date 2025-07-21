@@ -22,7 +22,9 @@ var _chp: int = 12
 	get:
 		return _chp
 		
-var hero_hp #: HeartPoints
+
+#var hero_hp : HeartPoints
+
 
 func set_max_hp():
 	var m = max_hp
@@ -49,22 +51,24 @@ func set_cur_hp_instant():
 	pass
 
 func _ready():
-	if not hero_hp:
-		max_hp = 0
-		cur_hp = 0
+	#if not hero_hp:
+		#max_hp = 0
+		#cur_hp = 0
+	pass
 		
 func _process(_delta):
 	#print ("Bar is updating")
-	if not hero_hp:
-		#print ("not hero_hp")
-		max_hp = 0
-		cur_hp = 0
-		return
-	var hp = hero_hp #as HeartPoints
-	if hp.hp != max_hp: 
-		#print("updating max!")
-		max_hp = hp.hp
-	if hp.hp - hp.damage_taken != cur_hp: 
-		#print("updating HP!")
-		cur_hp = hp.hp - hp.damage_taken
+	#if not hero_hp:
+		##print ("not hero_hp")
+		#max_hp = 0
+		#cur_hp = 0
+		#return
+	#var hp = hero_hp as HeartPoints
+	#if hp.hp != max_hp: 
+		##print("updating max!")
+		#max_hp = hp.hp
+	#if hp.hp - hp.damage_taken != cur_hp: 
+		##print("updating HP!")
+		#cur_hp = hp.hp - hp.damage_taken
+	pass
 		

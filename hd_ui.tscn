@@ -1,6 +1,5 @@
-[gd_scene load_steps=3 format=3 uid="uid://dl6pwtan31cs6"]
+[gd_scene load_steps=2 format=3 uid="uid://dl6pwtan31cs6"]
 
-[ext_resource type="PackedScene" uid="uid://l7j8t24lwhi4" path="res://addons/hd-ui/heart_bar.tscn" id="1_ox7ek"]
 [ext_resource type="Script" path="res://addons/hd-ui/hd_ui.gd" id="1_uypwa"]
 
 [node name="hd_ui" type="CanvasLayer"]
@@ -15,21 +14,4 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="Control"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="heart_bar" parent="Control/MarginContainer" instance=ExtResource("1_ox7ek")]
-layout_mode = 2
 mouse_filter = 2

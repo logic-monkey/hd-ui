@@ -2,7 +2,7 @@
 extends EditorPlugin
 
 const NAME = "_OPT"
-const UI = "_UI"
+#const UI = "_UI"
 
 func _enter_tree():
 	add_autoload_singleton(NAME, "res://addons/hd-ui/options_menu.tscn")

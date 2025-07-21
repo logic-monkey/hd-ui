@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var heart_bar = $Control/MarginContainer/heart_bar
+#@onready var heart_bar = $Control/MarginContainer/heart_bar
 
 #var sc = 0
 #var hs = 122
