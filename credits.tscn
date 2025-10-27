@@ -60,7 +60,12 @@ horizontal_alignment = 1
 
 [node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-text = "Concept, Code, Writing, and Pictures by E. Darwin Hartshorn"
+text = "Code by Gregory the Great"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Pictures by E. Darwin Hartshorn"
 horizontal_alignment = 1
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -95,8 +100,13 @@ horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-text = "Uses the free Godot Engine"
+text = "Uses the free Godot Redot Engine"
 horizontal_alignment = 1
+
+[node name="Line2D" type="Line2D" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Label3"]
+points = PackedVector2Array(902, 20, 932, 5, 924, 30, 964, 4, 960, 23, 977, 19)
+width = 5.0
+default_color = Color(0.976471, 0.298039, 0.360784, 1)
 
 [node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
