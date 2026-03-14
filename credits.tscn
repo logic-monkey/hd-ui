@@ -2,8 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://eq7rhl6d0pm0" path="res://addons/hd-ui/atkinson.tres" id="1_52i85"]
 [ext_resource type="FontFile" uid="uid://be8xotsmfg0m5" path="res://addons/hd-ui/AtkinsonHyperlegible-Bold.ttf" id="2_wf0nx"]
-[ext_resource type="Script" path="res://addons/hd-ui/credits.gd" id="2_wslxk"]
-[ext_resource type="Script" path="res://addons/doodads/control_bleeper.gd" id="4_jbcl7"]
+[ext_resource type="Script" uid="uid://dyd0wpie8g4hh" path="res://addons/hd-ui/credits.gd" id="2_wslxk"]
+[ext_resource type="Script" uid="uid://6ag5uc34rd1g" path="res://addons/doodads/control_bleeper.gd" id="4_jbcl7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f3wmb"]
 

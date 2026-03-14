@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=33 format=4 uid="uid://eq7rhl6d0pm0"]
+[gd_resource type="Theme" format=4 uid="uid://eq7rhl6d0pm0"]
 
 [ext_resource type="FontFile" uid="uid://be8xotsmfg0m5" path="res://addons/hd-ui/AtkinsonHyperlegible-Bold.ttf" id="1_kp8pg"]
 [ext_resource type="FontFile" uid="uid://dnn46x0n4e0q6" path="res://addons/hd-ui/AtkinsonHyperlegible-Regular.ttf" id="1_sortn"]
@@ -88,6 +88,15 @@ data = PackedByteArray("d09GMgABAAAAALU4ABEAAAABjRQAALTXAAEAAAAAAAAAAAAAAAAAAAAA
 font_name = "Open Sans"
 style_name = "SemiBold"
 font_weight = 600
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 18.0
 cache/0/16/0/descent = 5.0
 cache/0/16/0/underline_position = 1.60938

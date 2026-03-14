@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://lejd0mhhcyyg"]
 
 [ext_resource type="Theme" uid="uid://eq7rhl6d0pm0" path="res://addons/hd-ui/atkinson.tres" id="1_au30n"]
-[ext_resource type="Script" path="res://addons/hd-ui/options_menu.gd" id="1_c3thh"]
-[ext_resource type="Script" path="res://addons/doodads/control_bleeper.gd" id="3_ddg6f"]
+[ext_resource type="Script" uid="uid://cmbrt2kptr8ab" path="res://addons/hd-ui/options_menu.gd" id="1_c3thh"]
+[ext_resource type="Script" uid="uid://6ag5uc34rd1g" path="res://addons/doodads/control_bleeper.gd" id="3_ddg6f"]
 
 [node name="options_menu" type="CanvasLayer"]
 process_mode = 3

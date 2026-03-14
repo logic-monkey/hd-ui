@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://de3ogl35mhi83"]
 
 [ext_resource type="Theme" uid="uid://eq7rhl6d0pm0" path="res://addons/hd-ui/atkinson.tres" id="1_n2kj8"]
-[ext_resource type="Script" path="res://addons/hd-ui/hd-title.gd" id="1_nob1s"]
+[ext_resource type="Script" uid="uid://pfhldh3ttycg" path="res://addons/hd-ui/hd-title.gd" id="1_nob1s"]
 [ext_resource type="FontFile" uid="uid://be8xotsmfg0m5" path="res://addons/hd-ui/AtkinsonHyperlegible-Bold.ttf" id="2_7xhkl"]
-[ext_resource type="Script" path="res://addons/doodads/control_bleeper.gd" id="4_uwt4n"]
+[ext_resource type="Script" uid="uid://6ag5uc34rd1g" path="res://addons/doodads/control_bleeper.gd" id="4_uwt4n"]
 [ext_resource type="FontFile" uid="uid://dnn46x0n4e0q6" path="res://addons/hd-ui/AtkinsonHyperlegible-Regular.ttf" id="5_khcf1"]
 [ext_resource type="FontFile" uid="uid://bxqkw6d6mtojm" path="res://addons/hd-ui/AtkinsonHyperlegible-Italic.ttf" id="6_rcl7e"]
 [ext_resource type="FontFile" uid="uid://dm0o8def167df" path="res://addons/hd-ui/AtkinsonHyperlegible-BoldItalic.ttf" id="7_ccw0b"]

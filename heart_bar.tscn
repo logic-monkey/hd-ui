@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://l7j8t24lwhi4"]
 
-[ext_resource type="Script" path="res://addons/hd-ui/heart_bar.gd" id="1_yxwct"]
+[ext_resource type="Script" uid="uid://ctrn6lo1s3lbc" path="res://addons/hd-ui/heart_bar.gd" id="1_yxwct"]
 
 [node name="heart_bar" type="HBoxContainer"]
 offset_right = 40.0

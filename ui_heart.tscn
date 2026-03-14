@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://d0crhwlqkeo2g"]
 
-[ext_resource type="Script" path="res://addons/hd-ui/ui_heart.gd" id="1_wgepe"]
+[ext_resource type="Script" uid="uid://dr2t2i23ytlam" path="res://addons/hd-ui/ui_heart.gd" id="1_wgepe"]
 [ext_resource type="Texture2D" uid="uid://cyqab26ji1bca" path="res://addons/hd-ui/heart.png" id="2_topwj"]
 
 [sub_resource type="Animation" id="Animation_nxfp5"]
@@ -194,13 +194,13 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_futbx"]
 _data = {
-"0": SubResource("Animation_nxfp5"),
-"1": SubResource("Animation_r6uh8"),
-"2": SubResource("Animation_4m7wo"),
-"3": SubResource("Animation_bbhfw"),
-"4 0": SubResource("Animation_gc54v"),
-"4 1": SubResource("Animation_gy70w"),
-"4 2": SubResource("Animation_8nit6")
+&"0": SubResource("Animation_nxfp5"),
+&"1": SubResource("Animation_r6uh8"),
+&"2": SubResource("Animation_4m7wo"),
+&"3": SubResource("Animation_bbhfw"),
+&"4 0": SubResource("Animation_gc54v"),
+&"4 1": SubResource("Animation_gy70w"),
+&"4 2": SubResource("Animation_8nit6")
 }
 
 [node name="ui_heart" type="Control"]
