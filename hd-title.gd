@@ -68,4 +68,4 @@ func _on_story_pressed() -> void:
 	if bg and bg.has_method("start"):
 		bg.start()
 		await bg.started
-	_PANELS.Start()
+	#_PANELS.Start()
